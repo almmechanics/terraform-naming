@@ -1,6 +1,18 @@
+terraform {
+  required_providers {
+    azurerm = {
+      version = "=2.45.1"
+    }
+  }
+}
+
 provider "azurerm" {
-  version = "=2.3.0"
-  features {}
+  skip_provider_registration = true
+  features {
+    key_vault {
+      purge_soft_delete_on_destroy = true
+    }
+  }
 }
 
 locals {
