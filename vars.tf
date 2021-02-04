@@ -61,7 +61,7 @@ variable "action" {
 
 variable "name" {
   type        = string
-  description = "Azure Action  name"
+  description = "Azure Action name"
 }
 
 

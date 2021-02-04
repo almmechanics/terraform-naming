@@ -1,20 +1,3 @@
-terraform {
-  required_providers {
-    azurerm = {
-      version = "=2.45.1"
-    }
-  }
-}
-
-provider "azurerm" {
-  skip_provider_registration = true
-  features {
-    key_vault {
-      purge_soft_delete_on_destroy = true
-    }
-  }
-}
-
 locals {
   rg_raw    = format("%s%s_rg", var.system_id, var.environment_id)
   rg_sub_id = format("%s%s_rg_%s", var.system_id, var.environment_id, var.optional_sub_id)
