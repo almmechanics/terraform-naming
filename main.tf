@@ -1,3 +1,7 @@
+terraform {
+
+}
+
 locals {
   rg_raw    = format("%s%s_rg", var.system_id, var.environment_id)
   rg_sub_id = format("%s%s_rg_%s", var.system_id, var.environment_id, var.optional_sub_id)
